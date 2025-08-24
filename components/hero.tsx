@@ -1,4 +1,8 @@
+import { FaLocationArrow } from "react-icons/fa"
+
 import { cn } from "@/lib/utils"
+
+import { MagicButton } from "./ui/magic-button"
 import { Spotlight } from "./ui/spotlight"
 import { TextGenerateEffect } from "./ui/text-generate-effect"
 
@@ -21,18 +25,23 @@ export const Hero = () => {
           )}
         />
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)] dark:bg-black-100"></div>
-        <div className="flex justify-center">
+
+        <div className="flex justify-center z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
             <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-80">Dynamic Web Magic with Next.js</h2>
 
             <TextGenerateEffect
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
-              words="Transforme Conceitos em Experiências Harmoniosas"
+              words="Transforme Conceitos em Experiências de Usuário Harmoniosas"
             />
 
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
               Olá, meu nome é Maycon, um desenvolvedor do Brasil.
             </p>
+
+            <a href="#about">
+              <MagicButton title="Veja meu trabalho" icon={<FaLocationArrow />} position="right" />
+            </a>
           </div>
         </div>
       </div>
