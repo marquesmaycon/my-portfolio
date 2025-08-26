@@ -6,7 +6,12 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "https://de13ebc06d15475e71f0c28a6922f964@o4509911780098048.ingest.us.sentry.io/4509911782588416",
-
+  integrations: [
+    Sentry.feedbackIntegration({
+      // Additional SDK configuration goes in here, for example:
+      colorScheme: "system",
+    }),
+  ],
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
   // Enable logs to be sent to Sentry
@@ -14,6 +19,6 @@ Sentry.init({
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
-});
+})
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
