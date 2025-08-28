@@ -8,7 +8,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect"
 
 export const Hero = () => {
   return (
-    <section className="pb-20 pt-36">
+    <section className="pb-10" id="hero,">
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
         <Spotlight className="-top-10 -left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -28,19 +28,19 @@ export const Hero = () => {
 
         <div className="flex justify-center z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-            <h1 className="uppercase tracking-widest text-xs text-blue-100 max-w-80">Dynamic Web Magic with Next.js</h1>
+            <h1 className="uppercase tracking-widest text-xs text-blue-100">Soluções Web Dinâmicas com JavaScript</h1>
 
             <TextGenerateEffect
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
-              words="Transforme Conceitos em Experiências de Usuário Harmoniosas"
+              words="Transforme Ideias em Experiências Fluídas e Harmoniosas"
             />
 
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              Olá, meu nome é Maycon, um desenvolvedor do Brasil.
+              Olá, meu nome é Maycon e ajudo empresas e projetos a ganhar vida na web de forma moderna e intuitiva.
             </p>
 
             <a href="#about">
-              <MagicButton title="Veja meu trabalho" icon={<FaLocationArrow />} position="right" />
+              <MagicButton title="Confira meu trabalho" icon={<FaLocationArrow />} position="right" />
             </a>
           </div>
         </div>

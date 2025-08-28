@@ -3,11 +3,11 @@ import { FaLocationArrow } from "react-icons/fa"
 import { projects } from "@/data"
 import { PinContainer } from "./ui/3d-pin"
 
-export const RecentProjects = () => {
+export const Projects = () => {
   return (
-    <section className="py-20" id="projects">
+    <section className="py-40" id="projects">
       <h2 className="heading">
-        A small collection of <span className="text-purple-500">recent projects</span>
+        Alguns <span className="text-purple-300">projetos recentes</span>
       </h2>
       <div className="flex flex-wrap justify-center items-center p-4 gap-x-16 gap-y-8 mt-10">
         {projects.map(({ id, title, des, img, link, iconLists }) => (

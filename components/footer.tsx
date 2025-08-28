@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { FaLocationArrow } from "react-icons/fa"
 import { socialMedia } from "@/data"
+
 import { MagicButton } from "./ui/magic-button"
 
 export const Footer = () => {
@@ -8,14 +9,14 @@ export const Footer = () => {
     <footer className="w-full pt-10" id="contact">
       <div className="flex flex-col items-center">
         <h2 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple-300">your</span> digital presence to the next-level
+          Eleve <span className="text-purple-300">sua</span> presença digital para o próximo nível
         </h2>
         <p className="text-neutral-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let's discuss how I can help you achieve your goals.
+          Fale comigo e vamos criar juntos soluções que impulsionam seus projetos.
         </p>
 
         <a href="mailto:mayconmarquesg@gmail.com">
-          <MagicButton title="Lets get in touch" icon={<FaLocationArrow />} position="right" />
+          <MagicButton title="Fale comigo" icon={<FaLocationArrow />} position="right" />
         </a>
       </div>
 

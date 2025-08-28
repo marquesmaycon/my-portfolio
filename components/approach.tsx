@@ -7,19 +7,23 @@ import { CanvasRevealEffect } from "./ui/canvas-reveal-effect"
 
 export const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full">
       <h2 className="heading">
         Minha <span className="text-purple-300">Abordagem</span>
       </h2>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
-          title="Planajemaneto & Estratégia"
-          description="Vamos colaborar para listar os objetivos, público alvo e funcionalidades chave do projeto"
-          icon={<AceternityIcon order="Phase 1" />}
+          title="Descoberta & Alinhamento"
+          description="Entendo os objetivos, defino requisitos e alinho expectativas junto ao cliente."
+          icon={<AceternityIcon order="Fase 1" />}
         >
           <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900" />
         </Card>
-        <Card title="Nisha is Munni" description="Vamos explorar a relação entre Nisha e Munni" icon={<AceternityIcon order="Phase 2" />}>
+        <Card
+          title="Desenvolvimento & Iteração"
+          description="Crio a solução com entregas frequentes, garantindo flexibilidade e ajustes durante o processo."
+          icon={<AceternityIcon order="Fase 2" />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -30,7 +34,11 @@ export const Approach = () => {
             dotSize={2}
           />
         </Card>
-        <Card title="Munni is Aditi" description="Vamos explorar a relação entre Munni e Aditi" icon={<AceternityIcon order="Phase 3" />}>
+        <Card
+          title="Entrega & Evolução"
+          description="Lanço o projeto em produção e continuo aprimorando com melhorias e suporte contínuo."
+          icon={<AceternityIcon order="Fase 3" />}
+        >
           <CanvasRevealEffect animationSpeed={3} containerClassName="bg-sky-600" colors={[[125, 211, 252]]} />
         </Card>
       </div>
@@ -73,10 +81,10 @@ const Card = ({
         <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
           {icon}
         </div>
-        <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+        <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
           {title}
         </h2>
-        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-purple-300 group-hover/canvas-card:-translate-y-2 transition duration-200 text-center ">
+        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 group-hover/canvas-card:-translate-y-2 transition duration-200 text-center font-semibold">
           {description}
         </h2>
       </div>
