@@ -22,10 +22,10 @@ type BentoGridItemProps = {
   className?: string
   title?: string | React.ReactNode
   description?: string | React.ReactNode
-  img?: string | React.ReactNode
+  img?: string
   imgClassName?: string
   titleClassName?: string
-  spareImg?: string | React.ReactNode
+  spareImg?: string
 }
 
 export const BentoGridItem = ({ id, className, title, description, img, imgClassName, titleClassName, spareImg }: BentoGridItemProps) => {

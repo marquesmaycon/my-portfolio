@@ -24,7 +24,8 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      const direction = current - scrollYProgress.getPrevious()
+      const previous = scrollYProgress.getPrevious?.()
+      const direction = previous !== undefined ? current - previous : 0
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false)
@@ -66,7 +67,7 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </a>
         ))}
       </motion.div>

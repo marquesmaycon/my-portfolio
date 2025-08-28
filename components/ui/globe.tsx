@@ -62,11 +62,9 @@ interface WorldProps {
   data: Position[]
 }
 
-let numbersOfRings = [0]
-
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null)
-  const groupRef = useRef()
+  const groupRef = useRef<ThreeGlobe | null>(null)
   const [isInitialized, setIsInitialized] = useState(false)
 
   const defaultProps = {
@@ -90,7 +88,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   useEffect(() => {
     if (!globeRef.current && groupRef.current) {
       globeRef.current = new ThreeGlobe()
-      ;(groupRef.current as any).add(globeRef.current)
+      groupRef.current.add(globeRef.current)
       setIsInitialized(true)
     }
   }, [])
@@ -116,10 +114,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (!globeRef.current || !isInitialized || !data) return
 
     const arcs = data
-    let points = []
+    const points = []
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i]
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number }
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
@@ -226,7 +223,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio)
     gl.setSize(size.width, size.height)
     gl.setClearColor(0xffaaff, 0)
-  }, [])
+  }, [gl, size])
 
   return null
 }
